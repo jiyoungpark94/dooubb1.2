@@ -19,4 +19,5 @@ export interface Brand {
   id: string;
   name: string;
   logoText: string;
+  logoUrl?: string;
 }

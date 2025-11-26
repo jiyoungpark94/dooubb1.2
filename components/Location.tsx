@@ -32,9 +32,17 @@ export const Location: React.FC = () => {
                 {/* Wrapper to control width alignment */}
                 <div className="w-full max-w-md">
                     <div className="mb-6">
-                        <span className="text-[#01C853] font-bold tracking-wider uppercase text-xs mb-2 block">
-                            Dooub Headquarters
-                        </span>
+                        {/* Ping Interaction + Text Replacement */}
+                        <div className="mb-4 flex items-center gap-3">
+                            <span className="relative flex h-3 w-3">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#01C853] opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#01C853]"></span>
+                            </span>
+                            <span className="text-[#01C853] font-bold tracking-widest uppercase text-sm">
+                                Dooub Headquarters
+                            </span>
+                        </div>
+
                         <h3 className="text-3xl md:text-4xl font-bold text-white leading-[1.1] mb-4 tracking-tight">
                             Pangyo<br/>
                             Innovation Lab.

@@ -42,9 +42,18 @@ export const Services: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-4 mb-4"
+              className="flex items-center gap-5 mb-4"
             >
-              <div className="w-12 h-12 bg-[#FF4D4D] rounded-2xl shadow-[0_0_15px_rgba(255,77,77,0.3)] flex-shrink-0"></div>
+              <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-[0_0_20px_rgba(255,77,77,0.4)] flex-shrink-0 bg-[#FF4D4D] p-4 flex items-center justify-center">
+                <img 
+                    src="https://raw.githubusercontent.com/jiyoungpark94/dooubb1.2/main/logo_subsy.svg" 
+                    alt="Subsy Logo" 
+                    className="w-full h-full object-contain brightness-0 invert"
+                    onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                    }}
+                />
+              </div>
               <div>
                 <h3 className="text-3xl font-bold text-white">Subsy</h3>
                 <p className="text-[#FF4D4D] font-medium tracking-wide">AI Subtitle & Translation Platform</p>
@@ -220,9 +229,18 @@ export const Services: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-4 mb-4 justify-end md:justify-start"
+              className="flex items-center gap-5 mb-4 justify-end md:justify-start"
             >
-              <div className="w-12 h-12 bg-[#33B5A5] rounded-2xl shadow-[0_0_15px_rgba(51,181,165,0.3)] flex-shrink-0"></div>
+              <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-[0_0_20px_rgba(51,181,165,0.4)] flex-shrink-0 bg-[#33B5A5] p-4 flex items-center justify-center">
+                <img 
+                    src="https://raw.githubusercontent.com/jiyoungpark94/dooubb1.2/main/logo_selectt.svg" 
+                    alt="Selectt Logo" 
+                    className="w-full h-full object-contain brightness-0 invert"
+                    onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                    }}
+                />
+              </div>
               <div>
                 <h3 className="text-3xl font-bold text-white">Selectt</h3>
                 <p className="text-[#33B5A5] font-medium tracking-wide">AI Investment Assistant</p>

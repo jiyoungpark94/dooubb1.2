@@ -52,22 +52,42 @@ export const BrandMarquee: React.FC<BrandMarqueeProps> = ({ brands, speed = 30 }
               className="mx-4 md:mx-6"
             >
               {/* Glassmorphism Card */}
-              <div className="group relative w-[180px] h-[100px] md:w-[220px] md:h-[130px] rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col items-center justify-center gap-2 md:gap-3 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:shadow-[0_0_30px_-10px_rgba(255,255,255,0.15)] cursor-pointer">
+              {/* Size reduced by ~10% from original w-[180px] h-[100px] md:w-[220px] md:h-[130px] */}
+              <div className="group relative w-[160px] h-[90px] md:w-[200px] md:h-[115px] rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col items-center justify-center gap-2 md:gap-3 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:shadow-[0_0_30px_-10px_rgba(255,255,255,0.15)] cursor-pointer">
                 
                 {/* Glow Effect */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Logo Representation */}
-                <div className="relative z-10 w-8 h-8 md:w-12 md:h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
-                   <span className="text-lg md:text-xl font-bold text-white/90">
-                     {brand.name.charAt(0)}
-                   </span>
-                </div>
-                
-                {/* Brand Name Text */}
-                <span className="relative z-10 text-sm md:text-lg font-medium text-white/70 tracking-wide group-hover:text-white transition-colors duration-300">
-                  {brand.logoText}
-                </span>
+                {brand.logoUrl ? (
+                    <div className="relative z-10 w-full h-full p-6 flex items-center justify-center">
+                        <img 
+                            src={brand.logoUrl} 
+                            alt={brand.name} 
+                            // Unified tone: Grayscale + Brightness adjustment for inactive state
+                            className="max-w-full max-h-full object-contain filter grayscale brightness-[1.2] opacity-60 group-hover:filter-none group-hover:opacity-100 transition-all duration-300"
+                            onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                                e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                            }}
+                        />
+                        {/* Fallback Text if image fails */}
+                        <span className="hidden text-sm md:text-lg font-medium text-white/70 tracking-wide group-hover:text-white transition-colors duration-300">
+                            {brand.logoText}
+                        </span>
+                    </div>
+                ) : (
+                    <>
+                        <div className="relative z-10 w-8 h-8 md:w-12 md:h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                        <span className="text-lg md:text-xl font-bold text-white/90">
+                            {brand.name.charAt(0)}
+                        </span>
+                        </div>
+                        <span className="relative z-10 text-sm md:text-lg font-medium text-white/70 tracking-wide group-hover:text-white transition-colors duration-300">
+                        {brand.logoText}
+                        </span>
+                    </>
+                )}
 
               </div>
             </div>
@@ -82,13 +102,15 @@ export const BrandMarquee: React.FC<BrandMarqueeProps> = ({ brands, speed = 30 }
 };
 
 export const Projects: React.FC = () => {
+    const baseUrl = "https://raw.githubusercontent.com/jiyoungpark94/dooubb1.2/main";
+    
     const brands: Brand[] = [
-        { id: '1', name: 'TVING', logoText: 'TVING' },
-        { id: '2', name: 'wavve', logoText: 'wavve' },
-        { id: '3', name: 'FONDANT', logoText: 'FONDANT' },
-        { id: '4', name: 'Melon', logoText: 'Melon' },
-        { id: '5', name: 'Mnet', logoText: 'Mnet' },
-        { id: '6', name: 'CJ ENM', logoText: 'CJ ENM' },
+        { id: '1', name: 'TVING', logoText: 'TVING', logoUrl: `${baseUrl}/logo_tving.svg` },
+        { id: '2', name: 'wavve', logoText: 'wavve', logoUrl: `${baseUrl}/logo_wavve.svg` },
+        { id: '3', name: 'FONDANT', logoText: 'FONDANT', logoUrl: `${baseUrl}/logo_fondant.png` },
+        { id: '4', name: 'Melon', logoText: 'Melon', logoUrl: `${baseUrl}/logo_melon.png` },
+        { id: '5', name: 'Mnet', logoText: 'Mnet', logoUrl: `${baseUrl}/logo_mnet.png` },
+        { id: '6', name: 'CJ ENM', logoText: 'CJ ENM', logoUrl: `${baseUrl}/logo_cjenm.png` },
     ];
 
     return (
