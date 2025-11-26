@@ -48,7 +48,7 @@ export const Services: React.FC = () => {
                 <img 
                     src="https://raw.githubusercontent.com/jiyoungpark94/dooubb1.2/main/logo_subsy.svg" 
                     alt="Subsy Logo" 
-                    className="w-full h-full object-contain brightness-0 invert"
+                    className="w-full h-full object-contain brightness-0 invert scale-[1.75]"
                     onError={(e) => {
                         e.currentTarget.style.display = 'none';
                     }}
@@ -235,7 +235,7 @@ export const Services: React.FC = () => {
                 <img 
                     src="https://raw.githubusercontent.com/jiyoungpark94/dooubb1.2/main/logo_selectt.svg" 
                     alt="Selectt Logo" 
-                    className="w-full h-full object-contain brightness-0 invert"
+                    className="w-full h-full object-contain brightness-0 invert scale-125"
                     onError={(e) => {
                         e.currentTarget.style.display = 'none';
                     }}

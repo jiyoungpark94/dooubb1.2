@@ -8,12 +8,10 @@ import { Value } from './components/Value';
 import { Contact } from './components/Contact';
 import { Location } from './components/Location';
 import { Footer } from './components/Footer';
-import { BreathingOrb } from './components/BreathingOrb';
 
 function App() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#01C853] selection:text-black font-sans">
-      <BreathingOrb />
       <Header />
       <main className="relative z-10">
         <Hero />
