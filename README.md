@@ -23,13 +23,9 @@ npm run dev
 
 ## 📁 폴더 구조 (Folder Structure)
 /public
-
 /src
-
 /components
-
 /app
-
 /lib
 
 ---
