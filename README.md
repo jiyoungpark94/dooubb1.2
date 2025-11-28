@@ -1,40 +1,49 @@
 # 프로젝트 명 (Dooub)
 
-## 🚀 Live Preview  
+## 🚀 Live Preview
 https://dooub.vercel.app/
-
-배포된 웹사이트는 위 URL에서 확인하실 수 있습니다.
-
----
-
-## 📂 프로젝트 개요  
-이 레포지토리는 본 프로젝트의 소스 코드 및 구성 파일을 포함하고 있습니다.  
-클라이언트 검수 및 후속 작업을 위한 기준 버전입니다.
 
 ---
 
 ## 🛠️ 로컬 실행 방법 (Run Locally)
 
 ### 1. 패키지 설치
-```bash
 npm install
 
-2. 환경 변수 설정
+markdown
+코드 복사
 
-프로젝트 루트에 .env.local 파일을 생성하고 다음 값을 입력해주세요:
-
+### 2. 환경 변수 설정
+프로젝트 루트에 `.env.local` 파일을 생성하고 아래 값을 입력해주세요:
 GEMINI_API_KEY=YOUR_API_KEY
 
-3. 개발 서버 실행
+shell
+코드 복사
+
+### 3. 개발 서버 실행
 npm run dev
 
+yaml
+코드 복사
 
-개발 서버는 기본적으로 http://localhost:3000
- 에서 실행됩니다.
+개발 서버는 기본적으로 http://localhost:3000 에서 실행됩니다.
 
-📁 폴더 구조 (Folder Structure)
-/public        # 정적 파일
+---
+
+## 📁 폴더 구조 (Folder Structure)
+/public
 /src
-  /components  # UI 컴포넌트
-  /app         # 페이지 라우트
-  /lib         # 유틸 및 API 관련 로직
+/components
+/app
+/lib
+
+yaml
+코드 복사
+
+---
+
+## 📦 기술 스택 (Tech Stack)
+- Next.js  
+- React  
+- Node.js  
+- Vercel (Deploy)
