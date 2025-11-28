@@ -10,21 +10,12 @@ https://dooub.vercel.app/
 ### 1. 패키지 설치
 npm install
 
-markdown
-코드 복사
-
 ### 2. 환경 변수 설정
 프로젝트 루트에 `.env.local` 파일을 생성하고 아래 값을 입력해주세요:
 GEMINI_API_KEY=YOUR_API_KEY
 
-shell
-코드 복사
-
 ### 3. 개발 서버 실행
 npm run dev
-
-yaml
-코드 복사
 
 개발 서버는 기본적으로 http://localhost:3000 에서 실행됩니다.
 
@@ -36,9 +27,6 @@ yaml
 /components
 /app
 /lib
-
-yaml
-코드 복사
 
 ---
 
